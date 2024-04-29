@@ -36,7 +36,6 @@ public class GameMap extends JFrame implements KeyListener {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // panel for the JTable(map)
         mapPanel = new JPanel();
         mapPanel.setBackground(Color.black);
         mapPanel.setLayout(new BorderLayout());
@@ -45,12 +44,10 @@ public class GameMap extends JFrame implements KeyListener {
         random = new Random();
         elements = drawMap(Menu.getRows(), Menu.getColumns());
 
-        // map JTable
         MapTableModel mapTableModel = new MapTableModel(elements);
         jTable = new JTable(mapTableModel);
         jTable.setShowGrid(false);
 
-        // Create a custom cell renderer to display the custom images
         DefaultTableCellRenderer cellRenderer = new DefaultTableCellRenderer() {
             @Override
             public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected,
@@ -59,7 +56,6 @@ public class GameMap extends JFrame implements KeyListener {
             }
         };
 
-        // Set the custom cell renderer for each column
         for (int i = 0; i < jTable.getColumnCount(); i++) {
             jTable.getColumnModel().getColumn(i).setCellRenderer(cellRenderer);
         }
@@ -78,7 +74,6 @@ public class GameMap extends JFrame implements KeyListener {
         EnemyLabel enemyLabel3 = new EnemyLabel(pacManLabel);
         JPanel enemyPanel3 = new MyJPanel(null, enemyLabel3);
 
-        // panels for timer, health etc.
         UpperPanel upperPanel = getUpperPanel();
         bottomPanel = getBottomPanel();
 
@@ -127,7 +122,6 @@ public class GameMap extends JFrame implements KeyListener {
         });
 
 
-        // Add a component listener to adjust table size on resize
         jTable.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
@@ -308,19 +302,16 @@ public class GameMap extends JFrame implements KeyListener {
     private JPanel[][] drawMap(int rows, int columns) {
         JPanel[][] result = new JPanel[rows][columns];
 
-        // Draw the sides of the map
         for (int i = 0; i < result[0].length; i++) {
             result[0][i] = new WallJPanel();
             result[result.length - 1][i] = new WallJPanel();
         }
 
-        // Fill the left and right columns with WallJPanel
         for (int i = 1; i < result.length - 1; i++) {
             result[i][0] = new WallJPanel();
             result[i][result[0].length - 1] = new WallJPanel();
         }
 
-        // Fill the inner part of the map with walls and an empty space for the player
         for (int i = 1; i < result.length - 1; i++) {
             for (int j = 1; j < result[0].length - 1; j++) {
                 if (i % 2 == 1 && j % 2 == 1) {
