@@ -36,7 +36,7 @@ rendering the window may take some time. Consider using smaller values, such as 
 - Pac-Man sometimes appears slightly misaligned with the grid, shifting horizontally or vertically, and occasionally rendering above walls.
 
 ## Prerequisites
-- **Java Development Kit (JDK)** 23.
+- **Java Development Kit (JDK)** 19.
 - **GIT** for cloning the repository.
 - A terminal or IDE (e.g., IntelliJ IDEA).
 
