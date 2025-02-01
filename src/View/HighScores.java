@@ -41,9 +41,6 @@ public class HighScores extends JFrame implements Serializable {
         }
     }
 
-
-
-
     public static ArrayList<PacManSerialization> deserializeObjects() {
         ArrayList<PacManSerialization> pacManListRead;
         try {

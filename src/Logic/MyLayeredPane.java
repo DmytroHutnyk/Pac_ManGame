@@ -4,9 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MyLayeredPane extends JLayeredPane {
-
-
-
     @Override
     public void doLayout() {
         super.doLayout();

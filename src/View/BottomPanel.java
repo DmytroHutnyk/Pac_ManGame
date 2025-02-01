@@ -11,6 +11,5 @@ public class BottomPanel extends JPanel implements Runnable {
 
     @Override
     public void run() {
-
     }
 }
