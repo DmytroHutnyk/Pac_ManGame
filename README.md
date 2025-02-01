@@ -18,7 +18,6 @@ The game includes dynamic upgrade mechanics, a robust scoring system, and a GUI 
 - **File Handling (ObjectOutputStream, ObjectInputStream)** - Manages data persistence.
 - **MVC Architecture**
 
-
 ## Usage
 Upon launching the application, the main menu will be displayed with the following options:
 - **New Game**: Start a new game session. You will be prompted to select the board size.
