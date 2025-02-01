@@ -15,7 +15,7 @@ The game includes dynamic upgrade mechanics, a robust scoring system, and a GUI 
 - **Java Swing** - GUI framework (JFrame, JPanel, JTable, JList, JDialog)
 - **Multithreading (Thread)**
 - **Serialization (Serializable)** - Saves and loads app related data(high scores).
-- **File Handling (ObjectOutputStream, ObjectInputStream)** - Manages data persistence.
+- **File Handling (InputStream, OutputStream)** - Manages data persistence.
 - **MVC Architecture**
 
 
